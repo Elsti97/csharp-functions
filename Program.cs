@@ -1,6 +1,15 @@
-﻿
+﻿Console.Write("Quanti numeri vuoi inserire? ");
+//int input = int.Parse(Console.ReadLine() ?? "");
+int input = Convert.ToInt32(Console.ReadLine() ?? "");
+
 // Array vari e funzione stampa riutilizzata
-int[] numeri = { 2, 6, 7, 5, 3, 9 };
+int[] numeri = new int[input];
+for (int i = 0; i < input; i++)
+{
+    Console.Write("Inserisci numero: ");
+    numeri[i] = Convert.ToInt32(Console.ReadLine() ?? "");
+}
+
 Console.Write("Array originale: ");
 printArray(numeri);
 
