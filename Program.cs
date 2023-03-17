@@ -88,7 +88,7 @@ int sommaElementiArray(int[] array)
 
 // BONUS BONUS
 
-int[] extraArray = { 1, 2, 3, 4, 5, 6};
+int[] extraArray = {10, 11, 12, 15, 24, 34, 4, 5, 6};
 int minimo = TrovaNumeroMinimo(extraArray);
 Console.WriteLine("Il numero più piccolo nell'array extra è: " + minimo);
 
@@ -114,7 +114,19 @@ int TrovaNumeroMinimo(int[] array)
 int TrovaMinimo(int[] array)
 {
 
-    int minimo2 = array.Min();
+    if (array.Length is 1)
+    {
+        return array[0];
+    }
+    else
+    {
+        int num1 = array[0];
+        int num2 = TrovaMinimo(array.Skip(1).ToArray());
 
-    return minimo2;
+        return num1 < num2 ? num1 : num2;
+    }
+
+   
+
+    
 }
