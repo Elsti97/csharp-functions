@@ -1,5 +1,4 @@
 ﻿Console.Write("Quanti numeri vuoi inserire? ");
-//int input = int.Parse(Console.ReadLine() ?? "");
 int input = Convert.ToInt32(Console.ReadLine() ?? "");
 
 // Array vari e funzione stampa riutilizzata
@@ -25,6 +24,9 @@ Console.WriteLine("La somma è: " + somma);
 
 int sommaQuadrato = sommaElementiArray(numeriAlQuadrato);
 Console.WriteLine("La somma dei quadrati è: " + sommaQuadrato);
+Console.WriteLine();
+
+
 
 // Funzione stampa array
 void printArray(int[] array)
@@ -81,4 +83,38 @@ int sommaElementiArray(int[] array)
     }
 
     return somma;
+}
+
+
+// BONUS BONUS
+
+int[] extraArray = { 1, 2, 3, 4, 5, 6};
+int minimo = TrovaNumeroMinimo(extraArray);
+Console.WriteLine("Il numero più piccolo nell'array extra è: " + minimo);
+
+int minimo2 = TrovaMinimo(extraArray);
+Console.WriteLine("Il numero più piccolo nell'array extra è (NO FOR): " + minimo2);
+
+int TrovaNumeroMinimo(int[] array)
+{
+
+    int minimo = array[0];
+
+    for (int i = 1; i < array.Length; i++)
+    {
+        if (array[i] < minimo)
+        {
+            minimo = array[i];
+        }
+    }
+
+    return minimo;
+}
+
+int TrovaMinimo(int[] array)
+{
+
+    int minimo2 = array.Min();
+
+    return minimo2;
 }
