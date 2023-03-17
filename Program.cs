@@ -8,8 +8,14 @@ int[] numeriAlQuadrato = ElevaArrayAlQuadrato(numeri);
 Console.Write("Array al quadrato: ");
 printArray(numeriAlQuadrato);
 
+Console.Write("Prova dell'array originale non modificato: ");
+printArray(numeri);
+
 int somma = sommaElementiArray(numeri);
 Console.WriteLine("La somma è: " + somma);
+
+int sommaQuadrato = sommaElementiArray(numeriAlQuadrato);
+Console.WriteLine("La somma dei quadrati è: " + sommaQuadrato);
 
 // Funzione stampa array
 void printArray(int[] array)
